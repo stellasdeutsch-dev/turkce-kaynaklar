@@ -369,6 +369,79 @@ p{margin:0 0 14px}
 .fwm b{color:var(--yel)}
 .fwm .hat{position:absolute;left:4%;top:-34%;width:26%;rotate:-14deg}
 
+
+/* ---------- visuals ---------- */
+.cloud{position:absolute;z-index:0;width:180px;opacity:.9;animation:drift 70s linear infinite;pointer-events:none}
+.cloud path{fill:#fff}
+@keyframes drift{from{transform:translateX(-30vw)}to{transform:translateX(130vw)}}
+.orbit{position:absolute;z-index:2;pointer-events:none;aspect-ratio:1;transform:scaleY(.42)}
+.orb{position:absolute;inset:0;animation:spin 28s linear infinite}
+.orb>i{position:absolute;left:50%;top:50%;width:0;height:0;transform:rotate(var(--a)) translateX(var(--R,120px)) rotate(calc(var(--a) * -1))}
+.orb>i>span{position:absolute;left:-22px;top:-22px;width:44px;height:44px;animation:spin 28s linear infinite reverse}
+.orb>i>span>img{width:44px;height:44px;border-radius:14px;background:#fff;padding:5px;transform:scaleY(2.38);box-shadow:0 8px 18px -8px rgba(0,40,90,.5)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.band{position:relative;z-index:3;margin:16px -20px;padding:12px 0;overflow:hidden;background:var(--yel);rotate:-3deg;box-shadow:0 14px 30px -18px rgba(0,40,90,.6)}
+.band.p{background:var(--pink);rotate:2.4deg;margin-top:-4px}
+.band .track{display:flex;align-items:center;gap:26px;width:max-content;animation:marq 46s linear infinite}
+.band.p .track{animation-direction:reverse}
+.gs .band .track{animation:none}
+.band .it{display:inline-flex;align-items:center;gap:10px;font-family:var(--d);font-weight:700;text-transform:uppercase;font-size:24px;line-height:1;white-space:nowrap}
+.band .it img{width:30px;height:30px;border-radius:9px;background:#fff;padding:3px}
+.band .it .st{width:16px;height:16px;color:var(--ink)}
+@keyframes marq{to{transform:translateX(-50%)}}
+.ico.logo{background:#fff!important;box-shadow:0 0 0 3px var(--cc,#eee)}
+.ico.logo img{width:30px;height:30px;border-radius:8px}
+.rchips a img{width:18px;height:18px;border-radius:5px}
+.wrow .tile.col{background:rgba(255,255,255,.6)!important}
+.wrow .tile.col img{position:absolute;width:42%;height:42%;border-radius:12px;background:#fff;padding:3px;box-shadow:0 6px 14px -6px rgba(0,0,0,.35);animation:bob 2.4s ease-in-out infinite}
+.wrow .tile.col img:nth-child(1){left:8%;top:12%;rotate:-8deg}
+.wrow .tile.col img:nth-child(2){right:8%;top:22%;rotate:8deg;animation-delay:-.8s}
+.wrow .tile.col img:nth-child(3){left:30%;bottom:6%;animation-delay:-1.6s}
+.tabsdemo{margin:18px 0 6px}
+.bwin{border-radius:24px;background:#F2F4FA;overflow:hidden;box-shadow:0 0 0 1.5px var(--line)}
+.bbar{display:flex;align-items:center;gap:6px;height:38px;padding:0 14px;background:#E7EBF6}
+.bbar i{width:10px;height:10px;border-radius:50%;background:var(--pinkd)}.bbar i:nth-child(2){background:#F3C24B}.bbar i:nth-child(3){background:var(--peri)}
+.bbar b{margin-left:auto;font-family:var(--d);font-weight:700;font-size:18px;text-transform:uppercase}
+.tabfield{position:relative;height:300px;overflow:hidden}
+.tabp{position:absolute;left:0;top:0;display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 10px 0 6px;border-radius:10px;background:#fff;font-size:12px;font-weight:600;white-space:nowrap;box-shadow:0 6px 14px -8px rgba(0,0,0,.35);will-change:transform}
+.tabp img{width:18px;height:18px;border-radius:5px}
+.tabp.keep{height:52px;padding:0 18px 0 10px;font-size:16px;border-radius:16px;gap:10px}
+.tabp.keep img{width:30px;height:30px;border-radius:8px}
+.tabp.keep small{display:block;font-size:11px;font-weight:600;opacity:.7}
+.tabcap{display:flex;justify-content:space-between;font-size:13px;color:var(--mute);margin-top:8px}
+.ill{width:78%;height:78%;overflow:visible}
+.ill text{font-family:var(--d);font-weight:700;font-size:17px;fill:#121212;text-anchor:middle}
+.ill .s{stroke:#121212;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.ill *{transform-box:fill-box}
+.ill.gram .b{animation:blk 3.6s infinite cubic-bezier(.3,1.5,.5,1)}
+.ill.gram .b2{animation-delay:.25s}.ill.gram .b3{animation-delay:.5s}
+@keyframes blk{0%{transform:translateY(-120px);opacity:0}14%{transform:none;opacity:1}82%{transform:none;opacity:1}96%,100%{transform:translateY(12px);opacity:0}}
+.ill.words .cf{transform-origin:50% 50%;animation:flipx 3.2s infinite ease-in-out}
+.ill.words .t1{animation:sw1 3.2s infinite}.ill.words .t2{animation:sw2 3.2s infinite}
+@keyframes flipx{0%,38%{transform:scaleX(1)}50%{transform:scaleX(0)}62%,100%{transform:scaleX(1)}}
+@keyframes sw1{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes sw2{0%,49%{opacity:0}50%,100%{opacity:1}}
+.ill.dict .mg{animation:scan 5s infinite ease-in-out}
+@keyframes scan{0%,100%{transform:translate(0,0)}25%{transform:translate(42px,14px)}50%{transform:translate(8px,30px)}75%{transform:translate(44px,44px)}}
+.ill.listen .eq{transform-origin:50% 100%;animation:eq .9s infinite ease-in-out}
+.ill.listen .eq:nth-child(2){animation-delay:-.2s}.ill.listen .eq:nth-child(3){animation-delay:-.45s}.ill.listen .eq:nth-child(4){animation-delay:-.1s}.ill.listen .eq:nth-child(5){animation-delay:-.6s}
+@keyframes eq{0%,100%{transform:scaleY(.3)}50%{transform:scaleY(1)}}
+.ill.watch .pl{transform-origin:50% 50%;animation:pulse2 1.6s infinite ease-in-out}
+.ill.watch .pr{transform-origin:0 50%;animation:prog 4s infinite linear}
+@keyframes pulse2{50%{transform:scale(1.18)}}
+@keyframes prog{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.ill.read .pg{transform-box:view-box;transform-origin:60px 60px;animation:page 2.8s infinite ease-in-out}
+@keyframes page{0%,15%{transform:scaleX(1)}55%,100%{transform:scaleX(-1)}}
+.ill.speak .b2{transform-origin:100% 100%;animation:pop2 3s infinite cubic-bezier(.3,1.6,.5,1)}
+.ill.speak .dt{animation:dots 1s infinite ease-in-out}
+.ill.speak .dt:nth-child(2){animation-delay:.15s}.ill.speak .dt:nth-child(3){animation-delay:.3s}
+@keyframes pop2{0%,10%{transform:scale(0)}25%,85%{transform:scale(1)}100%{transform:scale(0)}}
+@keyframes dots{50%{transform:translateY(-5px)}}
+.scard .art .ill{position:relative;z-index:1}
+.dcard .dill{position:absolute;right:12px;top:12px;width:64px;height:64px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.55)}
+.dcard .dill .ill{width:90%;height:90%}
+@media (hover:hover){ .card{transition:rotate .3s,translate .3s} .card:hover{rotate:-1deg;translate:0 -4px} }
+
 /* reveal fallback */
 .js .rv{transition:transform .8s cubic-bezier(.2,1,.3,1)}
 .js:not(.gs) .rv:not(.on){transform:translateY(30px)}
@@ -454,7 +527,7 @@ p{margin:0 0 14px}
 
 <!-- HERO -->
 <section class="sheet sky hero sec" data-n="Старт">
-  <div class="bubbles" aria-hidden="true"><i style="left:6%;top:30%;width:46px;height:46px"></i><i style="left:62%;top:12%;width:26px;height:26px;animation-delay:-2s"></i><i style="left:44%;top:48%;width:70px;height:70px;animation-delay:-3.5s"></i><i style="right:6%;top:58%;width:34px;height:34px;animation-delay:-1s"></i></div>
+  <svg class="cloud" viewBox="0 0 200 90" aria-hidden="true" style="top:16%;animation-delay:-20s"><path d="M30 80h140a28 28 0 0 0 0-56 40 40 0 0 0-74-12A30 30 0 0 0 40 34 23 23 0 0 0 30 80z"/></svg><svg class="cloud" viewBox="0 0 200 90" aria-hidden="true" style="top:58%;width:130px;opacity:.7;animation-delay:-48s;animation-duration:90s"><path d="M30 80h140a28 28 0 0 0 0-56 40 40 0 0 0-74-12A30 30 0 0 0 40 34 23 23 0 0 0 30 80z"/></svg><div class="orbit" id="orbit" aria-hidden="true"><div class="orb" id="orb"></div></div><div class="bubbles" aria-hidden="true"><i style="left:6%;top:30%;width:46px;height:46px"></i><i style="left:62%;top:12%;width:26px;height:26px;animation-delay:-2s"></i><i style="left:44%;top:48%;width:70px;height:70px;animation-delay:-3.5s"></i><i style="right:6%;top:58%;width:34px;height:34px;animation-delay:-1s"></i></div>
   <div class="in">
     <div class="wm disp" aria-label="KAYNAKLAR"><span class="row1"><span style="--i:0">K</span><span style="--i:1">A</span><span style="--i:2">Y</span><span style="--i:3">N</span><span style="--i:4">A</span><span style="--i:5">K</span></span><span class="row2"><span class="b" style="--i:6">L</span><span class="b" style="--i:7">A</span><span class="b" style="--i:8">R</span></span></div>
     <svg class="herohat hat" viewBox="0 0 200 120" aria-hidden="true"><use href="#hat"/></svg>
@@ -468,12 +541,15 @@ p{margin:0 0 14px}
   <a class="seemore" href="#about">Смотреть дальше<i><svg class="ic"><use href="#i-arrow-down"/></svg></i></a>
 </section>
 
+<div class="band" aria-hidden="true"><div class="track" data-band="0"></div></div><div class="band p" aria-hidden="true"><div class="track" data-band="1"></div></div>
+
 <!-- ABOUT -->
 <section class="sheet sec" id="about" data-n="О гайде">
   <div class="in about">
     <span class="lbl">О гайде</span>
     <p class="state rv">У меня было <span class="pk">47 вкладок про турецкий</span>. Я открывал их каждый вечер. Смотрел. Закрывал. Через месяц я знал наизусть <span class="pk">названия сайтов</span>. Турецкий не знал.</p>
     <p class="story rv">Поэтому здесь не 47 вкладок, а маршрут. Каждый ресурс проверен и подписан: для какого уровня, бесплатно или нет, что именно он прокачивает. Бери три штуки, а не тридцать.</p>
+    <div class="tabsdemo rv"><div class="bwin"><div class="bbar"><i></i><i></i><i></i><b id="tabCount">47 вкладок</b></div><div class="tabfield" id="tabField"></div></div><div class="tabcap"><span>Прокручивай вниз</span><span>Хаос → система</span></div></div>
     <span class="lbl" style="margin-top:20px">Что внутри</span>
     <div class="stats" id="aboutStats">
       <div class="stat rv"><b data-to="60">60</b><strong>ресурсов</strong><span>сайты, приложения, каналы</span></div>
@@ -521,6 +597,8 @@ p{margin:0 0 14px}
   </div>
 </section>
 
+<div class="band p" aria-hidden="true" style="margin-top:16px"><div class="track" data-band="2"></div></div>
+
 <!-- CATALOG -->
 <section class="sheet sec" id="catalog" data-n="Каталог">
   <div class="in">
@@ -566,9 +644,11 @@ p{margin:0 0 14px}
   </div>
 </section>
 
+<div class="band" aria-hidden="true"><div class="track" data-band="3"></div></div>
+
 <!-- AD: ALTERNA -->
 <section class="sheet adhero sec" id="alterna" data-n="Alterna">
-  <div class="blobp" aria-hidden="true"></div>
+  <svg class="cloud" viewBox="0 0 200 90" aria-hidden="true" style="top:6%;animation-delay:-10s"><path d="M30 80h140a28 28 0 0 0 0-56 40 40 0 0 0-74-12A30 30 0 0 0 40 34 23 23 0 0 0 30 80z"/></svg><svg class="cloud" viewBox="0 0 200 90" aria-hidden="true" style="top:48%;width:120px;opacity:.75;animation-delay:-40s"><path d="M30 80h140a28 28 0 0 0 0-56 40 40 0 0 0-74-12A30 30 0 0 0 40 34 23 23 0 0 0 30 80z"/></svg><div class="blobp" aria-hidden="true"></div>
   <div class="big" aria-label="Всё уже собрано">Всё<br>уже<br>собрано</div>
   <div class="adphone"><div class="phone"><div class="scr"><img src="media/ph3.webp" alt="Каталог мультфильмов платформы Alterna на телефоне" loading="lazy"></div></div></div>
   <div class="tag"><b>A0 → C1</b>Alterna · платформа турецкого</div>
@@ -600,7 +680,7 @@ p{margin:0 0 14px}
   </div>
 </section>
 
-<section class="sheet sky sec" data-n="Как выглядит" style="color:var(--ink)">
+<section class="sheet sky sec" data-n="Как выглядит" style="color:var(--ink)"><svg class="cloud" viewBox="0 0 200 90" aria-hidden="true" style="top:3%;animation-delay:-30s"><path d="M30 80h140a28 28 0 0 0 0-56 40 40 0 0 0-74-12A30 30 0 0 0 40 34 23 23 0 0 0 30 80z"/></svg><svg class="cloud" viewBox="0 0 200 90" aria-hidden="true" style="top:40%;width:140px;opacity:.7;animation-delay:-5s;animation-duration:95s"><path d="M30 80h140a28 28 0 0 0 0-56 40 40 0 0 0-74-12A30 30 0 0 0 40 34 23 23 0 0 0 30 80z"/></svg>
   <div class="in">
     <h2 class="h2" style="color:#fff">Как это выглядит</h2>
     <div class="tilts">
@@ -769,10 +849,27 @@ function kInit(){
   try{ FAV = JSON.parse(localStorage.getItem('kaynak-fav') || '{}') || {}; }catch(e){ FAV = {}; }
   function saveFav(){ try{ localStorage.setItem('kaynak-fav', JSON.stringify(FAV)); }catch(e){} }
 
+
+  /* ---------- favicons (self-hosted) ---------- */
+  var FAVS = 'anylang-net,apps-ankiweb-net,babadum-com,character-ai,chatgpt-com,context-reverso-net,duostories-org,eksisozluk-com,engelsiz-kanald-com-tr,forvo-com,glosbe-com,hepturkce-com,kahoot-com,lingua-com,lingust-ru,lugatim-com,lyricstraining-com,onlineturkishclub-com,piktes-gov-tr,puhutv-com,quizlet-com,sozluk-gov-tr,tandem-net,vogue-com-tr,www-busuu-com,www-clozemaster-com,www-deepl-com,www-deepseek-com,www-dilbilgisi-net,www-eba-gov-tr,www-fiilcekimi-com,www-gzt-com,www-kinopoisk-ru,www-languageguide-org,www-loecsen-com,www-memrise-com,www-seslisozluk-net,www-showtv-com-tr,www-trtdinle-com,www-trtizle-com,www-turkish-academy,www-youtube-com'.split(',');
+  function favOf(r){ var d = r.u.replace(/^https?:\/\//,'').split('/')[0].toLowerCase().replace(/[^a-z0-9]+/g,'-'); return FAVS.indexOf(d) > -1 ? 'media/fav-' + d + '.webp' : null; }
+  function logo(r, cls){ var f = favOf(r); return f ? '<img src="' + f + '" alt="" loading="lazy" width="64" height="64"' + (cls ? ' class="' + cls + '"' : '') + '>' : ''; }
+
+  /* ---------- skill illustrations ---------- */
+  var ART = {
+    gram:'<svg class="ill gram" viewBox="0 0 120 120" aria-hidden="true"><g class="b b1"><rect class="s" x="14" y="78" width="42" height="28" rx="9" fill="#fff"/><text x="35" y="98">ev</text></g><g class="b b2"><rect class="s" x="60" y="78" width="46" height="28" rx="9" fill="#FF7FB3"/><text x="83" y="98">ler</text></g><g class="b b3"><rect class="s" x="36" y="46" width="46" height="28" rx="9" fill="#F4FC2B"/><text x="59" y="66">de</text></g></svg>',
+    words:'<svg class="ill words" viewBox="0 0 120 120" aria-hidden="true"><rect class="s" x="34" y="24" width="64" height="70" rx="12" fill="#FF7FB3" transform="rotate(10 66 59)"/><g class="cf"><rect class="s" x="24" y="30" width="66" height="70" rx="12" fill="#fff"/><text class="t1" x="57" y="70">kedi</text><text class="t2" x="57" y="70">кошка</text></g></svg>',
+    dict:'<svg class="ill dict" viewBox="0 0 120 120" aria-hidden="true"><rect x="16" y="26" width="88" height="80" rx="12" fill="#fff" class="s"/><rect x="28" y="40" width="60" height="6" rx="3" fill="#C9D6FF"/><rect x="28" y="54" width="44" height="6" rx="3" fill="#C9D6FF"/><rect x="28" y="68" width="56" height="6" rx="3" fill="#C9D6FF"/><rect x="28" y="82" width="36" height="6" rx="3" fill="#C9D6FF"/><g class="mg"><circle class="s" cx="40" cy="44" r="15" fill="rgba(244,252,43,.55)"/><path class="s" d="M51 55l14 14"/></g></svg>',
+    listen:'<svg class="ill listen" viewBox="0 0 120 120" aria-hidden="true"><path class="s" d="M24 70a36 36 0 0 1 72 0" fill="none" stroke-width="6"/><rect class="s" x="16" y="64" width="18" height="30" rx="8" fill="#FF7FB3"/><rect class="s" x="86" y="64" width="18" height="30" rx="8" fill="#FF7FB3"/><g><rect class="eq" x="42" y="62" width="6" height="30" rx="3" fill="#121212"/><rect class="eq" x="51" y="56" width="6" height="36" rx="3" fill="#121212"/><rect class="eq" x="60" y="62" width="6" height="30" rx="3" fill="#121212"/><rect class="eq" x="69" y="58" width="6" height="34" rx="3" fill="#121212"/><rect class="eq" x="78" y="66" width="6" height="26" rx="3" fill="#121212"/></g></svg>',
+    watch:'<svg class="ill watch" viewBox="0 0 120 120" aria-hidden="true"><path class="s" d="M46 22l14 12 14-12" fill="none"/><rect class="s" x="14" y="34" width="92" height="64" rx="12" fill="#fff"/><path class="pl s" d="M52 50l20 12-20 12z" fill="#FF7FB3"/><rect x="24" y="86" width="72" height="5" rx="2.5" fill="#E4E9F6"/><rect class="pr" x="24" y="86" width="72" height="5" rx="2.5" fill="#121212"/></svg>',
+    read:'<svg class="ill read" viewBox="0 0 120 120" aria-hidden="true"><path class="s" d="M60 36C48 28 30 28 16 32v58c14-4 32-4 44 4z" fill="#fff"/><path class="s" d="M60 36c12-8 30-8 44-4v58c-14-4-32-4-44 4z" fill="#fff"/><path class="pg s" d="M60 36c10-6 24-7 36-5v58c-12-2-26-1-36 5z" fill="#F4FC2B"/><path d="M26 46h24M26 56h24M26 66h20" stroke="#C9D6FF" stroke-width="4" stroke-linecap="round"/></svg>',
+    speak:'<svg class="ill speak" viewBox="0 0 120 120" aria-hidden="true"><path class="s" d="M14 30h56a10 10 0 0 1 10 10v20a10 10 0 0 1-10 10H34l-12 10V70h-8A10 10 0 0 1 4 60V40a10 10 0 0 1 10-10z" fill="#fff" transform="translate(6 0)"/><text x="48" y="56">merhaba</text><g class="b2"><path class="s" d="M50 64h52a10 10 0 0 1 10 10v16a10 10 0 0 1-10 10h-6v10l-12-10H50a10 10 0 0 1-10-10V74a10 10 0 0 1 10-10z" fill="#FF7FB3"/><g><circle class="dt" cx="64" cy="83" r="4" fill="#121212"/><circle class="dt" cx="76" cy="83" r="4" fill="#121212"/><circle class="dt" cx="88" cy="83" r="4" fill="#121212"/></g></g></svg>'
+  };
+
   function lvTxt(r){ return r.a === 0 && r.b === 5 ? 'любой уровень' : LV[r.a] + '–' + LV[r.b]; }
   function cardHtml(r){
     var c = CAT[r.c];
-    return '<article class="card" data-id="'+r.id+'"><div class="hd"><span class="ico" style="background:'+c.c+'">'+icon(c.ic)+'</span><h4>'+esc(r.n)+'<small>'+c.n+' · '+TYPE[r.t]+'</small></h4></div><p>'+esc(r.d)+'</p><div class="tags"><span>'+lvTxt(r)+'</span><span class="'+PRICE[r.p][1]+'">'+PRICE[r.p][0]+'</span></div><div class="ft"><a href="'+esc(r.u)+'" target="_blank" rel="noopener">Открыть '+icon('arrow-up-right')+'</a><button class="fav" type="button" data-fav="'+r.id+'" aria-pressed="'+(!!FAV[r.id])+'" aria-label="Добавить в мой список: '+esc(r.n)+'">'+icon('heart')+'</button></div></article>';
+    return '<article class="card" data-id="'+r.id+'"><div class="hd">'+(favOf(r) ? '<span class="ico logo" style="--cc:'+c.c+'">'+logo(r)+'</span>' : '<span class="ico" style="background:'+c.c+'">'+icon(c.ic)+'</span>')+'<h4>'+esc(r.n)+'<small>'+c.n+' · '+TYPE[r.t]+'</small></h4></div><p>'+esc(r.d)+'</p><div class="tags"><span>'+lvTxt(r)+'</span><span class="'+PRICE[r.p][1]+'">'+PRICE[r.p][0]+'</span></div><div class="ft"><a href="'+esc(r.u)+'" target="_blank" rel="noopener">Открыть '+icon('arrow-up-right')+'</a><button class="fav" type="button" data-fav="'+r.id+'" aria-pressed="'+(!!FAV[r.id])+'" aria-label="Добавить в мой список: '+esc(r.n)+'">'+icon('heart')+'</button></div></article>';
   }
 
   /* ---------- hero wordmark etc. ---------- */
@@ -783,17 +880,20 @@ function kInit(){
   }
 
   /* ---------- who chips ---------- */
-  $$('.rchips').forEach(function(box){ box.innerHTML = box.dataset.pick.split('|').map(function(n){ var r = BYN[n]; return r ? '<a href="'+esc(r.u)+'" target="_blank" rel="noopener">'+esc(n)+icon('arrow-up-right')+'</a>' : ''; }).join(''); });
+  $$('.rchips').forEach(function(box){ box.innerHTML = box.dataset.pick.split('|').map(function(n){ var r = BYN[n]; return r ? '<a href="'+esc(r.u)+'" target="_blank" rel="noopener">'+logo(r)+esc(n)+icon('arrow-up-right')+'</a>' : ''; }).join('');
+    var tile = $('.tile', box.parentNode), imgs = box.dataset.pick.split('|').map(function(n){ return BYN[n] && favOf(BYN[n]); }).filter(Boolean).slice(0, 3);
+    if(tile && imgs.length === 3){ tile.classList.add('col'); tile.innerHTML = imgs.map(function(f){ return '<img src="'+f+'" alt="" loading="lazy">'; }).join(''); }
+  });
 
   /* ---------- week planner ---------- */
   var WK = [
-    {d:'Пн', k:'Грамматика', m:20, c:'var(--yel)', r:'Lingust', t:'Одно правило и упражнения к нему. Не три правила. Одно.'},
-    {d:'Вт', k:'Слова', m:15, c:'var(--pink)', r:'Anki', t:'Двадцать карточек на повтор и пять новых. Пять, а не пятьдесят.'},
-    {d:'Ср', k:'Слушать', m:20, c:'var(--peri)', r:'Türkçenin Sesi Radyosu', t:'Один подкаст своего уровня. Второй раз повторяй за диктором вслух.'},
-    {d:'Чт', k:'Смотреть', m:25, c:'var(--yel)', r:'Easy Turkish', t:'Одно видео с турецкими субтитрами. Поставь на паузу хотя бы три раза.'},
-    {d:'Пт', k:'Читать', m:20, c:'var(--pink)', r:'Duostories', t:'Одна история целиком. Незнакомые слова сразу в Anki.'},
-    {d:'Сб', k:'Говорить', m:15, c:'var(--peri)', r:'ChatGPT', t:'Десять сообщений только на турецком. Попроси исправлять ошибки после каждого.'},
-    {d:'Вс', k:'Сериал', m:40, c:'#fff', r:'puhutv', t:'Серия без цели и без блокнота. Это тоже учёба, просто приятная.'}
+    {d:'Пн', k:'Грамматика', cat:'gram', m:20, c:'var(--yel)', r:'Lingust', t:'Одно правило и упражнения к нему. Не три правила. Одно.'},
+    {d:'Вт', k:'Слова', cat:'words', m:15, c:'var(--pink)', r:'Anki', t:'Двадцать карточек на повтор и пять новых. Пять, а не пятьдесят.'},
+    {d:'Ср', k:'Слушать', cat:'listen', m:20, c:'var(--peri)', r:'Türkçenin Sesi Radyosu', t:'Один подкаст своего уровня. Второй раз повторяй за диктором вслух.'},
+    {d:'Чт', k:'Смотреть', cat:'watch', m:25, c:'var(--yel)', r:'Easy Turkish', t:'Одно видео с турецкими субтитрами. Поставь на паузу хотя бы три раза.'},
+    {d:'Пт', k:'Читать', cat:'read', m:20, c:'var(--pink)', r:'Duostories', t:'Одна история целиком. Незнакомые слова сразу в Anki.'},
+    {d:'Сб', k:'Говорить', cat:'speak', m:15, c:'var(--peri)', r:'ChatGPT', t:'Десять сообщений только на турецком. Попроси исправлять ошибки после каждого.'},
+    {d:'Вс', k:'Сериал', cat:'watch', m:40, c:'#fff', r:'puhutv', t:'Серия без цели и без блокнота. Это тоже учёба, просто приятная.'}
   ];
   var wi = (new Date().getDay() + 6) % 7, wTouched = false, wT = null;
   $('#days').innerHTML = WK.map(function(w, i){ return '<button type="button" role="tab" data-d="'+i+'" aria-pressed="false" aria-selected="false">'+w.d+'</button>'; }).join('');
@@ -804,7 +904,7 @@ function kInit(){
     wi = i; var w = WK[i], r = BYN[w.r], C = 2*Math.PI*36, off = C*(1 - w.m/45);
     $$('#days button').forEach(function(b, k){ b.setAttribute('aria-pressed', k === i); b.setAttribute('aria-selected', k === i); });
     var card = $('#dcard'); card.style.background = w.c === '#fff' ? 'var(--ink)' : w.c; card.style.color = w.c === '#fff' ? '#fff' : 'var(--ink)';
-    card.innerHTML = '<svg class="ring" viewBox="0 0 84 84" aria-hidden="true"><circle class="bg" cx="42" cy="42" r="36"/><circle class="fg" cx="42" cy="42" r="36" stroke-dasharray="'+C+'" stroke-dashoffset="'+C+'" transform="rotate(-90 42 42)"'+(w.c === '#fff' ? ' style="stroke:var(--yel)"' : '')+'/><text x="42" y="51" text-anchor="middle"'+(w.c === '#fff' ? ' style="fill:#fff"' : '')+'>'+w.m+'</text></svg><span class="m">'+icon('clock')+w.m+' минут</span><div class="k">'+w.k+'</div><p>'+w.t+'</p>' + (r ? '<a class="pill sm '+(w.c === '#fff' ? 'y' : 'dark')+'" href="'+esc(r.u)+'" target="_blank" rel="noopener">'+esc(r.n)+' '+icon('arrow-up-right')+'</a>' : '');
+    card.innerHTML = '<svg class="ring" viewBox="0 0 84 84" aria-hidden="true"><circle class="bg" cx="42" cy="42" r="36"/><circle class="fg" cx="42" cy="42" r="36" stroke-dasharray="'+C+'" stroke-dashoffset="'+C+'" transform="rotate(-90 42 42)"'+(w.c === '#fff' ? ' style="stroke:var(--yel)"' : '')+'/><text x="42" y="51" text-anchor="middle"'+(w.c === '#fff' ? ' style="fill:#fff"' : '')+'>'+w.m+'</text></svg>'+(w.cat ? '<span class="dill">'+ART[w.cat]+'</span>' : '')+'<span class="m">'+icon('clock')+w.m+' минут</span><div class="k">'+w.k+'</div><p>'+w.t+'</p>' + (r ? '<a class="pill sm '+(w.c === '#fff' ? 'y' : 'dark')+'" href="'+esc(r.u)+'" target="_blank" rel="noopener">'+esc(r.n)+' '+icon('arrow-up-right')+'</a>' : '');
     requestAnimationFrame(function(){ requestAnimationFrame(function(){ var fg = $('.fg', card); if(fg) fg.style.strokeDashoffset = off; }); });
     if(A) G.fromTo('#dcard .k', {yPercent:60, rotation:4}, {yPercent:0, rotation:0, duration:.6, ease:'back.out(2)'});
   }
@@ -815,7 +915,7 @@ function kInit(){
   /* ---------- skill cards ---------- */
   var CK = Object.keys(CAT), BG = ['var(--yel)','var(--pink)','var(--peri)'];
   $('#scards').innerHTML = CK.map(function(k, i){ var c = CAT[k], n = R.filter(function(r){ return r.c === k; }).length, bg = BG[i % 3], art = BG[(i+1) % 3];
-    return '<button class="scard" type="button" data-cat="'+k+'" style="background:'+bg+'"><span class="art" style="background:'+art+'"><span class="n">'+String(i+1).padStart(2,'0')+'</span>'+icon(c.ic)+'</span><h3><span>'+c.n+'<small>'+n+' ресурсов</small></span>'+icon('arrow-right')+'</h3></button>'; }).join('');
+    return '<button class="scard" type="button" data-cat="'+k+'" style="background:'+bg+'"><span class="art" style="background:'+art+'"><span class="n">'+String(i+1).padStart(2,'0')+'</span>'+ART[k]+'</span><h3><span>'+c.n+'<small>'+n+' ресурсов</small></span>'+icon('arrow-right')+'</h3></button>'; }).join('');
   var sc = $('#scards');
   $('#skNext').onclick = function(){ sc.scrollBy({left:sc.clientWidth*.8, behavior:'smooth'}); };
   $('#skPrev').onclick = function(){ sc.scrollBy({left:-sc.clientWidth*.8, behavior:'smooth'}); };
@@ -867,6 +967,7 @@ function kInit(){
     renderFilters(); if(fFav) render(false);
   });
   renderFilters(); render(false);
+  if(A) ScrollTrigger.batch('#grid .card', {start:'top 95%', once:true, onEnter:function(b){ G.from(b, {y:50, rotation:function(){ return G.utils.random(-3,3); }, duration:.7, ease:'back.out(1.6)', stagger:.06}); }});
 
   /* ---------- match quiz ---------- */
   var QZ = [
@@ -963,6 +1064,58 @@ function kInit(){
     new IntersectionObserver(function(es){ es.forEach(function(en){ atPrice = en.isIntersecting; upd(); }); }).observe($('#price'));
   }
 
+
+  /* ---------- hero orbit of logos ---------- */
+  var ORB = ['chatgpt-com','www-youtube-com','duostories-org','quizlet-com','www-memrise-com','www-deepl-com','puhutv-com','www-trtizle-com','eksisozluk-com','apps-ankiweb-net'];
+  $('#orb').innerHTML = ORB.map(function(f, i){ return '<i style="--a:' + (i*36) + 'deg"><span><img src="media/fav-' + f + '.webp" alt=""></span></i>'; }).join('');
+  function layoutOrbit(){
+    var hat = $('.herohat'), hero = $('.hero'), o = $('#orbit');
+    if(!hat || !o) return;
+    var hr = hero.getBoundingClientRect(), b = hat.getBoundingClientRect(), cx = b.left - hr.left + b.width/2, cy = b.top - hr.top + b.height*.42, w = Math.min(hr.width*.86, b.width*1.3);
+    o.style.width = w + 'px'; o.style.left = (cx - w/2) + 'px'; o.style.top = (cy - w/2) + 'px';
+    $$('.orb>i').forEach(function(i){ i.style.setProperty('--R', (w/2 - 22) + 'px'); });
+  }
+  setTimeout(layoutOrbit, 1800); addEventListener('resize', layoutOrbit);
+
+  /* ---------- marquee bands ---------- */
+  var BANDS = [
+    R.filter(function(r){ return favOf(r); }).slice(0, 14),
+    ['Грамматика','Слова','Словари','Слушать','Смотреть','Читать','Говорить'],
+    R.filter(function(r){ return favOf(r); }).slice(14, 28),
+    ['Alterna','A0 → C1','1716 материалов','128 гайдов','$30 навсегда']
+  ];
+  $$('.track[data-band]').forEach(function(t){
+    var b = BANDS[+t.dataset.band], one = b.map(function(x){ return typeof x === 'string' ? '<span class="it">' + x + '<svg class="ic st"><use href="#i-star"/></svg></span>' : '<span class="it">' + logo(x) + esc(x.n) + '</span>'; }).join('');
+    t.innerHTML = one + one;
+    if(A){
+      var dir = +t.dataset.band % 2 ? 1 : -1;
+      var loop = G.fromTo(t, {xPercent:dir < 0 ? 0 : -50}, {xPercent:dir < 0 ? -50 : 0, duration:40, ease:'none', repeat:-1});
+      ScrollTrigger.create({trigger:t.parentNode, start:'top bottom', end:'bottom top', onToggle:function(self){ self.isActive ? loop.play() : loop.pause(); }, onUpdate:function(self){ var v = Math.abs(self.getVelocity()); G.to(loop, {timeScale:1 + Math.min(v/250, 7), duration:.2, overwrite:true}); G.to(loop, {timeScale:1, duration:1.4, delay:.25}); }});
+    }
+  });
+
+  /* ---------- tabs chaos → 3 tabs ---------- */
+  (function(){
+    var field = $('#tabField'); if(!field) return;
+    var pool = R.filter(function(r){ return favOf(r); }), html = '';
+    for(var i=0;i<44;i++){ var r = pool[(i*7) % pool.length]; html += '<span class="tabp">' + logo(r) + esc(r.n.split(' ')[0]) + '</span>'; }
+    var KEEP = [['Lingust','Грамматика','var(--yel)'],['Anki','Слова','var(--pink)'],['TRT Dinle','Уши','var(--peri)']];
+    KEEP.forEach(function(k){ var r = BYN[k[0]]; html += '<span class="tabp keep" style="background:' + k[2] + '">' + logo(r) + '<span>' + esc(r.n) + '<small>' + k[1] + '</small></span></span>'; });
+    field.innerHTML = html;
+    var tabs = $$('.tabp', field), keep = $$('.tabp.keep', field), rest = tabs.filter(function(t){ return !t.classList.contains('keep'); });
+    var seed = 7; function rnd(){ seed = (seed*9301 + 49297) % 233280; return seed/233280; }
+    function finalPos(){ var W = field.clientWidth, H = field.clientHeight; return keep.map(function(t, i){ return {x:(W - t.offsetWidth)/2, y:H/2 - 96 + i*66}; }); }
+    var cnt = $('#tabCount');
+    if(!A){ rest.forEach(function(t){ t.style.display = 'none'; }); var fp0 = finalPos(); keep.forEach(function(t, i){ t.style.transform = 'translate(' + fp0[i].x + 'px,' + fp0[i].y + 'px)'; }); cnt.textContent = '3 вкладки'; return; }
+    var W = field.clientWidth, H = field.clientHeight;
+    tabs.forEach(function(t){ G.set(t, {x:rnd()*(W - t.offsetWidth), y:rnd()*(H - t.offsetHeight), rotation:(rnd() - .5)*50, scale:t.classList.contains('keep') ? .62 : 1, opacity:1}); });
+    var fp = finalPos(), st = {n:47};
+    var tl = G.timeline({scrollTrigger:{trigger:field, start:'top 85%', end:'center 50%', scrub:.8}});
+    tl.to(rest, {x:W/2 - 50, y:H/2 - 16, rotation:function(){ return (rnd() - .5)*720; }, scale:.3, opacity:0, ease:'power2.in', stagger:{each:.01, from:'random'}, duration:.6}, 0)
+      .to(st, {n:3, duration:.75, ease:'none', onUpdate:function(){ var n = Math.round(st.n); cnt.textContent = n + ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? ' вкладки' : ' вкладок'); }}, 0)
+      .to(keep, {x:function(i){ return fp[i].x; }, y:function(i){ return fp[i].y; }, rotation:0, scale:1, ease:'back.out(1.6)', stagger:.08, duration:.45}, .45);
+  })();
+
   /* ---------- nav + hat rail ---------- */
   var secs = $$('.sec'), navA = $$('#nav a'), navBox = $('#nav');
   var rail = $('#rail'), thumb = $('#railThumb'), fill = $('#railFill'), bub = $('#railBub'), tk = $('#railTicks'), hatSvg = $('svg', thumb);
@@ -996,7 +1149,7 @@ function kInit(){
   thumb.addEventListener('pointerup', endDrag); thumb.addEventListener('pointercancel', endDrag);
   layout(); onScroll(); rail.classList.remove('show');
 
-  function refresh(){ if(G) ScrollTrigger.refresh(); layout(); onScroll(); }
+  function refresh(){ if(G) ScrollTrigger.refresh(); layout(); onScroll(); layoutOrbit(); }
   addEventListener('load', refresh);
   if(D.fonts && D.fonts.ready) D.fonts.ready.then(refresh);
 }
